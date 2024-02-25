@@ -1,6 +1,18 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import {
+  GiBeachBall,
+  GiCube,
+  GiDiceSixFacesFive,
+  GiDragonfly,
+  GiFlowerEmblem,
+  GiHearts,
+  GiHummingbird,
+  GiOpenBook,
+  GiUmbrella,
+  GiWaterDrop,
+} from "react-icons/gi";
+import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -11,7 +23,47 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className=" container flex items-center justify-center h-screen w-screen">
+          {children}
+        </main>
+        {/* Floating Icons */}
+        <div>
+          <ul className="circles w-full h-full top-0 left-0  absolute overflow-hidden border border-black z-0">
+            <li className="text-pink-500 flex items-center justify-center">
+              <GiCube size={60} />
+            </li>
+            <li className="text-pink-500 flex items-center justify-center">
+              <GiHearts size={36} />
+            </li>
+            <li className="text-pink-500 flex items-center justify-center">
+              <GiUmbrella size={36} />
+            </li>
+            <li className="text-pink-500 flex items-center justify-center">
+              <GiWaterDrop size={40} />
+            </li>
+            <li className="text-pink-500 flex items-center justify-center">
+              <GiBeachBall size={90} />
+            </li>
+            <li className="text-pink-500 flex items-center justify-center">
+              <GiOpenBook size={86} />
+            </li>
+            <li className="text-pink-500 flex items-center justify-center">
+              <GiDragonfly size={36} />
+            </li>
+            <li className="text-pink-500 flex items-center justify-center">
+              <GiDiceSixFacesFive size={36} />
+            </li>
+            <li className="text-pink-500 flex items-center justify-center">
+              <GiHummingbird size={46} />
+            </li>
+            <li className="text-pink-500 flex items-center justify-center">
+              <GiFlowerEmblem size={130} />
+            </li>
+          </ul>
+        </div>
+        <Toaster />
+      </body>
     </html>
   );
 }
