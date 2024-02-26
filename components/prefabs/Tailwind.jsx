@@ -72,6 +72,7 @@ export function Accordion_2() {
         <div className="flex cursor-pointer items-center justify-between">
           <span> What is Prefabs </span>
           <img
+            alt="accordion"
             src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
             className="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
           />
@@ -91,6 +92,7 @@ export function Accordion_2() {
         <div className="flex cursor-pointer items-center justify-between">
           <span> How can Prefabs Help </span>
           <img
+            alt="accordion"
             src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
             className="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
           />
@@ -110,15 +112,13 @@ export function Accordion_2() {
         <div className="flex cursor-pointer items-center justify-between">
           <span> Why use Prefabs </span>
           <img
+            alt="accordion"
             src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
             className="h-2 w-3 transition-all duration-500 group-focus:-rotate-180"
           />
         </div>
         <div className="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          hello
         </div>
       </div>
     </div>
@@ -511,7 +511,7 @@ export function Feature_Card() {
             <img
               className="w-64"
               src="https://source.unsplash.com/random/200x200"
-              alt=""
+              alt="random"
             />
             <div className="py-4 text-sky-600 text-center flex flex-col gap-4">
               <h1 className="text-xl font-bold">Diverse Selection</h1>
@@ -531,7 +531,7 @@ export function Feature_Card() {
             <img
               className="w-64"
               src="https://source.unsplash.com/random/200x200"
-              alt=""
+              alt="random"
             />
             <div className="py-4 text-sky-600 text-center flex flex-col gap-4">
               <h1 className="text-xl font-bold">Optimized Performance</h1>
