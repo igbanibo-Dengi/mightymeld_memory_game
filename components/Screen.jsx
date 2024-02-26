@@ -29,7 +29,7 @@ export function StartScreen({ start }) {
 
         <p className=" text-white text-xs">Choose your level to begin.</p>
 
-        <div className="flex text-sm flex-col gap-4">
+        <div className="flex items-center justify-center text-sm flex-col gap-4">
           <button
             onClick={() => start(2)}
             className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200"
@@ -144,6 +144,7 @@ export function PlayScreen({ end, difficulty }) {
 
   return (
     <div className="z-50 flex flex-col gap-8 justify-center items-center w-[500px]">
+      <Paragraph />
       {difficulty === 2 ? (
         <div className="grid grid-cols-2 gap-4 bg-blue-300/50 p-4 rounded-md">
           {getTiles(3 * difficulty).map((tile, i) => (
@@ -165,9 +166,7 @@ export function PlayScreen({ end, difficulty }) {
       )}
 
       <div className="flex py-1 px-4 rounded-full border gap-3 bg-blue-500/50 text-gray-700 items-center text-lg font-semi-bold">
-        <p className="text-white font-semibold text-base md:text-lg">
-          Attempts :
-        </p>
+        <p className="text-white text-sm font-semibold">Attempts :</p>
 
         <p className="text-white font-semibold text-base md:text-lg">
           {tryCount}

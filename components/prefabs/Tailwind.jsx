@@ -208,8 +208,9 @@ export function Input() {
 
 export function Paragraph() {
   return (
-    <p className="mt-2 text-sm text-white underline ">
-      May the force be with you.
+    <p className="mt-2 text-center text-xs text-foreground">
+      “Remember, The Force Will Be With You, Always"
+      <br />- Obi-Wan Kenobi
     </p>
   );
 }
