@@ -2,7 +2,7 @@ import { useState } from "react";
 import confetti from "canvas-confetti";
 import * as icons from "react-icons/gi";
 import { Tile } from "./Tile";
-import { Heading1 } from "./prefabs/Tailwind";
+
 import { useToast } from "@/components/ui/use-toast";
 
 export const possibleTileContents = [
@@ -24,23 +24,23 @@ export function StartScreen({ start }) {
       <div className="z-50 flex flex-col gap-4 p-5 justify-center items-center text-center py-20 rounded-lg mt bg-pink-500">
         <h2 className="font-semibold text-lg text-white">Memory</h2>
 
-        <p className=" text-white">FLip over tiles looking for pairs</p>
+        <p className=" text-white">Flip over tiles looking for pairs</p>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex text-sm flex-col gap-4">
           <button
-            onClick={() => start(1)}
+            onClick={() => start(2)}
             className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200"
           >
             Easy
           </button>
           <button
-            onClick={() => start(2)}
+            onClick={() => start(4)}
             className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200"
           >
             Medium
           </button>
           <button
-            onClick={() => start(3)}
+            onClick={() => start(6)}
             className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200"
           >
             Hard
@@ -141,15 +141,25 @@ export function PlayScreen({ end, difficulty }) {
 
   return (
     <div className="z-50 flex flex-col gap-8 justify-center items-center w-[500px]">
-      <div
-        className={`bg-blue-300/50 p-4 rounded-md grid w-fit mx-auto grid-cols-${
-          difficulty === 1 ? "2" : difficulty === 2 ? "2" : "3"
-        } gap-4`}
-      >
-        {getTiles(4 * difficulty).map((tile, i) => (
-          <Tile key={i} flip={() => flip(i)} {...tile} />
-        ))}
-      </div>
+      {difficulty === 2 ? (
+        <div className="grid grid-cols-2 gap-4 bg-blue-300/50 p-4 rounded-md">
+          {getTiles(3 * difficulty).map((tile, i) => (
+            <Tile key={i} flip={() => flip(i)} {...tile} />
+          ))}
+        </div>
+      ) : difficulty === 4 ? (
+        <div className="grid grid-cols-4 gap-4 bg-blue-500/50 p-4 rounded-md">
+          {getTiles(4 * difficulty).map((tile, i) => (
+            <Tile key={i} flip={() => flip(i)} {...tile} />
+          ))}
+        </div>
+      ) : (
+        <div className="grid grid-cols-4 gap-4 bg-blue-500/50 p-4 rounded-md">
+          {getTiles(4 * difficulty).map((tile, i) => (
+            <Tile key={i} flip={() => flip(i)} {...tile} />
+          ))}
+        </div>
+      )}
 
       <div className="flex py-1 px-4 rounded-full border gap-3 bg-blue-500/50 text-gray-700 items-center text-lg font-semi-bold">
         <p className="text-white font-semibold text-base md:text-lg">

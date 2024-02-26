@@ -5,7 +5,7 @@ import { PlayScreen, StartScreen } from "@/components/Screen";
 
 function App() {
   const [gameState, setGameState] = useState("start");
-  const [difficulty, setDifficulty] = useState(3);
+  const [difficulty, setDifficulty] = useState(6);
 
   const start = (newDifficulty) => {
     setDifficulty(newDifficulty);

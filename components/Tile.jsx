@@ -1,4 +1,3 @@
-import { FaQuestion } from "react-icons/fa";
 import { CSSTransition } from "react-transition-group";
 
 export function Tile({ content: Content, flip, state }) {
@@ -14,11 +13,11 @@ export function Tile({ content: Content, flip, state }) {
     <CSSTransition {...transitionProps}>
       {state === "start" ? (
         <Back
-          className="cursor-pointer flex items-center justify-center rounded-md h-16 md:h-24 w-16 md:w-24 bg-blue-300 hover:bg-blue-300/50 text-center"
+          className="cursor-pointer flex items-center justify-center rounded-md h-16  w-16 bg-blue-300 hover:bg-blue-300/50 text-center"
           flip={flip}
         />
       ) : state === "flipped" ? (
-        <Front className="p-2 flex items-center justify-center rounded-md h-16 md:h-24 w-16 md:w-24 bg-pink-300 text-white text-center">
+        <Front className="p-2 flex items-center justify-center rounded-md h-16 w-16 bg-pink-300 text-white text-center">
           <Content
             style={{
               display: "inline-block",
@@ -29,7 +28,7 @@ export function Tile({ content: Content, flip, state }) {
           />
         </Front>
       ) : (
-        <Matched className="flex items-center justify-center h-16 md:h-24 w-16 md:w-24 border border-green-500 rounded-md text-green-500 p-2">
+        <Matched className="flex items-center justify-center h-16 w-16 border border-green-500 rounded-md text-green-500 p-2">
           <Content
             style={{
               display: "inline-block",
@@ -47,9 +46,7 @@ export function Tile({ content: Content, flip, state }) {
 function Back({ className, flip }) {
   return (
     <div onClick={flip} className={className}>
-      <span className="">
-        {/* <FaQuestion color="white" size={20} /> */}
-      </span>
+      <span className="">{/* <FaQuestion color="white" size={20} /> */}</span>
     </div>
   );
 }

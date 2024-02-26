@@ -26,8 +26,8 @@ export function Button_Outlined() {
 
 export function Button_Rounded() {
   return (
-    <button className="py-2 px-4 rounded-full bg-sky-600 hover:bg-sky-700 transition duration-300 ease-in-out  text-white shadow text-sm">
-      Button
+    <button className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200">
+      Hard
     </button>
   );
 }
