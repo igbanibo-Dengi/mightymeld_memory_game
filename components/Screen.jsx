@@ -4,6 +4,7 @@ import * as icons from "react-icons/gi";
 import { Tile } from "./Tile";
 
 import { useToast } from "@/components/ui/use-toast";
+import { Paragraph } from "./prefabs/Tailwind";
 
 export const possibleTileContents = [
   icons.GiHearts,
@@ -22,29 +23,32 @@ export function StartScreen({ start }) {
   return (
     <>
       <div className="z-50 flex flex-col gap-4 p-5 justify-center items-center text-center py-20 rounded-lg mt bg-pink-500">
-        <h2 className="font-semibold text-lg text-white">Memory</h2>
+        <h2 className="font-semibold text-lg text-white">
+          Welcome to Jedi training
+        </h2>
 
-        <p className=" text-white">Flip over tiles looking for pairs</p>
+        <p className=" text-white text-xs">Choose your level to begin.</p>
 
         <div className="flex text-sm flex-col gap-4">
           <button
             onClick={() => start(2)}
             className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200"
           >
-            Easy
+            Padawan
           </button>
           <button
             onClick={() => start(4)}
             className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200"
           >
-            Medium
+            Master
           </button>
           <button
             onClick={() => start(6)}
             className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200"
           >
-            Hard
+            Grand Master
           </button>
+          <Paragraph />
         </div>
       </div>
     </>
