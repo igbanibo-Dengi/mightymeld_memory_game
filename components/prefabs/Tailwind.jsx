@@ -206,14 +206,14 @@ export function Input() {
   );
 }
 
-export function Paragraph() {
-  return (
-    <p className="mt-2 text-center text-xs text-foreground">
-      &quot;Remember, The Force Will Be With You, Always&quot;
-      <br />- Obi-Wan Kenobi
-    </p>
-  );
-}
+// export function Paragraph() {
+//   return (
+//     <p className="mt-2 text-center text-xs text-white">
+//       &quot;Remember, The Force Will Be With You, Always&quot;
+//       <br />- Obi-Wan Kenobi
+//     </p>
+//   );
+// }
 
 export function Select() {
   return (

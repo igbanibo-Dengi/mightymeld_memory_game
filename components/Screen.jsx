@@ -48,7 +48,10 @@ export function StartScreen({ start }) {
           >
             Grand Master
           </button>
-          <Paragraph />
+          <p className="mt-2 text-center text-xs text-white">
+            &quot;Remember, The Force Will Be With You, Always&quot;
+            <br />- Obi-Wan Kenobi
+          </p>
         </div>
       </div>
     </>
@@ -144,7 +147,10 @@ export function PlayScreen({ end, difficulty }) {
 
   return (
     <div className="z-50 flex flex-col gap-8 justify-center items-center">
-      <Paragraph />
+      <p className="mt-2 text-center text-xs text-white">
+        &quot;Remember, The Force Will Be With You, Always&quot;
+        <br />- Obi-Wan Kenobi
+      </p>
       {difficulty === 2 ? (
         <div className="grid grid-cols-2 gap-4 bg-blue-300/50 p-4 rounded-md">
           {getTiles(3 * difficulty).map((tile, i) => (
