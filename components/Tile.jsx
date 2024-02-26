@@ -48,7 +48,7 @@ function Back({ className, flip }) {
   return (
     <div onClick={flip} className={className}>
       <span className="">
-        <FaQuestion color="white" size={20} />
+        {/* <FaQuestion color="white" size={20} /> */}
       </span>
     </div>
   );

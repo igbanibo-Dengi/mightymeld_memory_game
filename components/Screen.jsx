@@ -21,25 +21,40 @@ export const possibleTileContents = [
 export function StartScreen({ start }) {
   return (
     <>
-      <div className="z-50 flex flex-col gap-4 p-4 justify-center items-center text-center py-20 rounded-lg mt bg-pink-500">
+      <div className="z-50 flex flex-col gap-4 p-5 justify-center items-center text-center py-20 rounded-lg mt bg-pink-500">
         <h2 className="font-semibold text-lg text-white">Memory</h2>
 
         <p className=" text-white">FLip over tiles looking for pairs</p>
 
-        <button
-          onClick={start}
-          className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200"
-        >
-          Play
-        </button>
+        <div className="flex flex-col gap-4">
+          <button
+            onClick={() => start(1)}
+            className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200"
+          >
+            Easy
+          </button>
+          <button
+            onClick={() => start(2)}
+            className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200"
+          >
+            Medium
+          </button>
+          <button
+            onClick={() => start(3)}
+            className="px-8 py-2 w-[200px] rounded-full bg-white text-pink-500 focus:ring-2 focus:ring-pink-400 hover:shadow-xl transition duration-200"
+          >
+            Hard
+          </button>
+        </div>
       </div>
     </>
   );
 }
 
-export function PlayScreen({ end }) {
+export function PlayScreen({ end, difficulty }) {
   const [tiles, setTiles] = useState(null);
   const [tryCount, setTryCount] = useState(0);
+  // const [difficulty, setDifficulty] = useState(3);
   const { toast } = useToast();
 
   const getTiles = (tileCount) => {
@@ -126,15 +141,19 @@ export function PlayScreen({ end }) {
 
   return (
     <div className="z-50 flex flex-col gap-8 justify-center items-center w-[500px]">
-      <div className="grid grid-cols-3 p-4 bg-blue-500/30 rounded-md gap-10">
-        {getTiles(12).map((tile, i) => (
+      <div
+        className={`bg-blue-300/50 p-4 rounded-md grid w-fit mx-auto grid-cols-${
+          difficulty === 1 ? "2" : difficulty === 2 ? "2" : "3"
+        } gap-4`}
+      >
+        {getTiles(4 * difficulty).map((tile, i) => (
           <Tile key={i} flip={() => flip(i)} {...tile} />
         ))}
       </div>
 
       <div className="flex py-1 px-4 rounded-full border gap-3 bg-blue-500/50 text-gray-700 items-center text-lg font-semi-bold">
         <p className="text-white font-semibold text-base md:text-lg">
-          Attemps :
+          Attempts :
         </p>
 
         <p className="text-white font-semibold text-base md:text-lg">
