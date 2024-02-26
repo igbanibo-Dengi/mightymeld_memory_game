@@ -491,7 +491,7 @@ export function Feature_Card() {
             <img
               className="w-64"
               src="https://source.unsplash.com/random/200x200"
-              alt=""
+              alt="prefab"
             />
             <div className="py-4 text-sky-600 text-center flex flex-col gap-4">
               <h1 className="text-xl font-bold">Easy Integration</h1>
@@ -949,9 +949,9 @@ export function Paragraph() {
   return (
     <p className="mt-2 text-sm text-slate-800">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book.
+      Lorem Ipsum has been the industry&apos;s standard dummy text ever since
+      the 1500s, when an unknown printer took a galley of type and scrambled it
+      to make a type specimen book.
     </p>
   );
 }
