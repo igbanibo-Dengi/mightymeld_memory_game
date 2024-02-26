@@ -58,7 +58,6 @@ export function StartScreen({ start }) {
 export function PlayScreen({ end, difficulty }) {
   const [tiles, setTiles] = useState(null);
   const [tryCount, setTryCount] = useState(0);
-  // const [difficulty, setDifficulty] = useState(3);
   const { toast } = useToast();
 
   const getTiles = (tileCount) => {
@@ -152,13 +151,13 @@ export function PlayScreen({ end, difficulty }) {
           ))}
         </div>
       ) : difficulty === 4 ? (
-        <div className="grid grid-cols-4 gap-4 bg-blue-500/50 p-4 rounded-md">
+        <div className="grid grid-cols-4 gap-4 bg-blue-300/50 p-4 rounded-md">
           {getTiles(4 * difficulty).map((tile, i) => (
             <Tile key={i} flip={() => flip(i)} {...tile} />
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-4 gap-4 bg-blue-500/50 p-4 rounded-md">
+        <div className="grid grid-cols-4 gap-4 bg-blue-300/50 p-4 rounded-md">
           {getTiles(4 * difficulty).map((tile, i) => (
             <Tile key={i} flip={() => flip(i)} {...tile} />
           ))}
