@@ -143,7 +143,7 @@ export function PlayScreen({ end, difficulty }) {
   };
 
   return (
-    <div className="z-50 flex flex-col gap-8 justify-center items-center w-[500px]">
+    <div className="z-50 flex flex-col gap-8 justify-center items-center">
       <Paragraph />
       {difficulty === 2 ? (
         <div className="grid grid-cols-2 gap-4 bg-blue-300/50 p-4 rounded-md">
@@ -158,7 +158,7 @@ export function PlayScreen({ end, difficulty }) {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-4 gap-4 bg-blue-300/50 p-4 rounded-md">
+        <div className="grid grid-cols-4 gap-3 bg-blue-300/50 p-3 rounded-md">
           {getTiles(4 * difficulty).map((tile, i) => (
             <Tile key={i} flip={() => flip(i)} {...tile} />
           ))}

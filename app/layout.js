@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <main className=" container flex flex-col items-center justify-center  gap-10 h-screen w-screen">
-            <span className="w-full flex justify-end max-w-[900px]">
+            <span className="w-full flex justify-end max-w-screen">
               <ModeToggle />
             </span>
             {children}
