@@ -4,7 +4,6 @@ import * as icons from "react-icons/gi";
 import { Tile } from "./Tile";
 
 import { useToast } from "@/components/ui/use-toast";
-import { Paragraph } from "./prefabs/Tailwind";
 
 export const possibleTileContents = [
   icons.GiHearts,
