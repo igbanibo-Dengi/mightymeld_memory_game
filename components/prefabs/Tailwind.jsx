@@ -209,7 +209,7 @@ export function Input() {
 export function Paragraph() {
   return (
     <p className="mt-2 text-center text-xs text-foreground">
-      “Remember, The Force Will Be With You, Always"
+      &quot;Remember, The Force Will Be With You, Always&quot;
       <br />- Obi-Wan Kenobi
     </p>
   );
